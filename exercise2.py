@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
     Perform a checksum on a UPC
 
