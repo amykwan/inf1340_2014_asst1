@@ -40,9 +40,10 @@ def grade_to_gpa(grade):
         TypeError if parameter is not a string or integer
         ValueError if parameter is out of range
     """
-    #letter_grade = ""
-    #gpa = 0.0
+    letter_grade = ""
+    gpa = 0.0
     #Create a Dictionary to store the Grades and their equivalent GPAs
+
     Dictionary1 = {'A+':4.0, 'A':4.0, 'A-':3.7, 'B+': 3.3, 'B':3.0, 'B-':2.7, 'FZ':0.0}
     #Define a function to convert the Grade which is of String Data type to GPA
     def StringToGPA(grade1):
@@ -76,10 +77,11 @@ def grade_to_gpa(grade):
             # raise a TypeError exception
         print ("error")
         raise TypeError("Invalid type passed as parameter")
+
     # write a long if-statement to convert letter_grade
     # assign the value to gpa
     #if letter_grade == "A":
         #gpa = 4.0
     return gpa
 
-print(grade_to_gpa(77))
+print(grade_to_gpa(81.8))
