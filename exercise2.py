@@ -38,11 +38,13 @@ def checksum (upc):
         print ("error")
         raise TypeError ("Invalid type passed as parameter")
     # check length of string
-    if len(upc) != 12:
-        # raise ValueError if not 12
-        print("error")
-        raise ValueError ("Invalid length of string")
-
+    check_length = len(upc) - 12
+    if check_length < 0:
+        print ("Error - length short by " + str(abs(check_length)))
+        raise ValueError ("Invalid length")
+    elif check_length < 0:
+        print ("Error - length over by " + str(abs(check_length)))
+        raise ValueError ("Invalid length")
     # convert string to array
     # hint: use the list function
 

@@ -38,6 +38,7 @@ def test_input():
     with pytest.raises(ValueError):
         checksum("1")
         checksum("1234567890")
+        checksum("123456789012345")
 
     # other tests
 
