@@ -1,9 +1,9 @@
 """ Module to test exercise2.py """
 
-__author__ = 'Amy Kwan, Suraj Narayanan, Sue Min'
-__email__ = "amykwan.cma@gmail.com, suraj.boss44@gmail.com, ses@drsusansim.org"
+__author__ = 'Amy Kwan, Suraj Narayanan'
+__email__ = "amykwan.cma@gmail.com, suraj.boss44@gmail.com"
 
-__copyright__ = "2014 AKSNSM"
+__copyright__ = "2014 AKSN"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
