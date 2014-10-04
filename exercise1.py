@@ -10,15 +10,14 @@ Example:
 """
 
 __author__ = 'Amy Kwan, Suraj Narayanan, Sue Min'
-__email__ = "ses@drsusansim.org"
+__email__ = "amykwan.cma@gmail.com, suraj.boss44@gmail.com, ses@drsusansim.org"
 
-__copyright__ = "2014 Susan Sim"
+__copyright__ = "2014 AKSNSM"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
 
 # imports one per line
-
 
 def grade_to_gpa(grade):
     """
@@ -44,7 +43,8 @@ def grade_to_gpa(grade):
     if type(grade) is str:
         #print ("letter") # remove this line once the code is implemented
         # check that the grade is one of the accepted values
-        if grade == "A+" or grade == "A" or grade == "A-" or grade == "B+" or grade == "B" or grade == "B-" or grade == "FZ":
+        if grade == "A+" or grade == "A" or grade == "A-" or grade == "B+" \
+                or grade == "B" or grade == "B-" or grade == "FZ":
             # assign grade to letter_grade
             letter_grade = grade
         else:

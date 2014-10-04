@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
-
 """ Module to test exercise1.py """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
+__author__ = 'Amy Kwan, Suraj Narayanan, Sue Min'
+__email__ = "amykwan.cma@gmail.com, suraj.boss44@gmail.com, ses@drsusansim.org"
 
-__copyright__ = "2014 Susan Sim"
+__copyright__ = "2014 AKSNSM"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
@@ -28,8 +26,8 @@ def test_letter_grade():
     
     with pytest.raises(ValueError):
         grade_to_gpa("q")
-    # add more tests for invalid values
 
+    # add more tests for invalid values
 
 def test_percentage_grade():
     """
@@ -67,7 +65,6 @@ def test_percentage_grade():
         grade_to_gpa(101)
         grade_to_gpa(-1)
 
-
 def test_float_input():
     """
     Float inputs
@@ -76,3 +73,7 @@ def test_float_input():
         grade_to_gpa(82.5)
 
 # add functions for any other tests
+
+def test_special_char_input():
+    with pytest.raises(ValueError):
+        grade_to_gpa("@#?")

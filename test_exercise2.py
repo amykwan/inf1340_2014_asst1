@@ -1,21 +1,16 @@
-#!/usr/bin/env python3
-
 """ Module to test exercise2.py """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
+__author__ = 'Amy Kwan, Suraj Narayanan, Sue Min'
+__email__ = "amykwan.cma@gmail.com, suraj.boss44@gmail.com, ses@drsusansim.org"
 
-__copyright__ = "2014 Susan Sim"
+__copyright__ = "2014 AKSNSM"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
 
 # imports one per line
-
-# imports one per line
 import pytest
 from exercise2 import checksum
-
 
 def test_checksum():
     """
@@ -25,7 +20,6 @@ def test_checksum():
     assert checksum("085392132225") is True
     assert checksum("717951000841") is False
     # other tests
-
 
 def test_input():
     """
@@ -38,8 +32,11 @@ def test_input():
     with pytest.raises(ValueError):
         checksum("1")
         checksum("1234567890")
+        # other tests
         checksum("123456789012345")
 
-    # other tests
-
 # add functions for any other tests
+def test_non_numeric_input():
+    with pytest.raises(ValueError):
+        checksum("asdfasdfasdf")
+        checksum("12345abcde12")

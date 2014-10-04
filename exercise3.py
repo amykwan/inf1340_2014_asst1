@@ -4,14 +4,14 @@ This module contains one function decide_rps. It can be passed a parameter
 that is a string. All other inputs will result in an error.
 
 Example:
-    $ python exercise1.py
+    $ python exercise3.py
 
 """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
+__author__ = 'Amy Kwan, Suraj Narayanan, Sue Min'
+__email__ = "amykwan.cma@gmail.com, suraj.boss44@gmail.com, ses@drsusansim.org"
 
-__copyright__ = "2014 Susan Sim"
+__copyright__ = "2014 AKSNSM"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
@@ -31,7 +31,7 @@ def decide_rps(player1, player2):
         player1 (string): player2 inputs/plays rock, paper, or scissors
 
     :return:
-        interger: value is 0, 1, or 2
+        integer: value is 0, 1, or 2
             0 if tie
             1 if player1 wins
             2 if player2 wins

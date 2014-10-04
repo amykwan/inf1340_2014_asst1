@@ -4,14 +4,14 @@ This module contains one function checksum. It can be passed a parameter
 that is a 12-digit string. All other inputs will result in an error.
 
 Example:
-    $ python exercise1.py
+    $ python exercise2.py
 
 """
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
+__author__ = 'Amy Kwan, Suraj Narayanan, Sue Min'
+__email__ = "amykwan.cma@gmail.com, suraj.boss44@gmail.com, ses@drsusansim.org"
 
-__copyright__ = "2014 Susan Sim"
+__copyright__ = "2014 AKSNSM"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
@@ -48,15 +48,18 @@ def checksum (upc):
     # convert string to array
     # hint: use the list function
 
-    upc_digits = []
-    #upc_digits = upc[0]
-    #upc_digits.append(upc[1])
+    upc_first11digits = []
 
     for i in range (0,11):
-        upc_digits.append(int(upc[i]))
+        # append only if character is a number
+        if upc[i].isdigit():
+            upc_first11digits.append(int(upc[i]))
+        else:
+            print(upc + " is not an integer")
+            raise ValueError ("Invalid character")
 
     # generate checksum using the first 11 digits provided
-    verify_upc = (sum(upc_digits[::2])*3 + sum(upc_digits[1::2])) % 10
+    verify_upc = (sum(upc_first11digits[::2])*3 + sum(upc_first11digits[1::2])) % 10
     if verify_upc > 0:
         verified_upc = 10 - verify_upc
     else:
