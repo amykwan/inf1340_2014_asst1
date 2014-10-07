@@ -32,11 +32,11 @@ def test_input():
     """
     with pytest.raises(TypeError):
         decide_rps(1, 2)
+    with pytest.raises(TypeError):
         decide_rps(1, "Paper")
 
     # other tests
     with pytest.raises(ValueError):
         decide_rps("Spark", "Lizard")
+    with pytest.raises(ValueError):
         decide_rps("Pen", "Fish")
-
-# add functions for any other tests

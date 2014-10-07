@@ -24,9 +24,11 @@ def checksum (upc):
     Checks if the digits in a UPC is consistent with checksum
 
     :param upc: a 12-digit universal product code
+
     :return:
         Boolean: True, checksum is correct
         False, otherwise
+
     :raises:
         TypeError if input is not a string
         ValueError if string is the wrong length (with error string stating how many digits are over or under
@@ -42,7 +44,7 @@ def checksum (upc):
     if check_length < 0:
         print ("Error - length short by " + str(abs(check_length)))
         raise ValueError ("Invalid length")
-    elif check_length < 0:
+    elif check_length > 0:
         print ("Error - length over by " + str(abs(check_length)))
         raise ValueError ("Invalid length")
     # convert string to array
@@ -66,9 +68,8 @@ def checksum (upc):
         verified_upc = verify_upc
 
     # check against the the twelfth digit
+    # return True if they are equal, False otherwise
     if int(upc [-1]) == verified_upc:
         return True
-    # return True if they are equal, False otherwise
     else:
         return False
-

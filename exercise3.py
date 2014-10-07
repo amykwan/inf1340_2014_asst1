@@ -41,8 +41,6 @@ def decide_rps(player1, player2):
         ValueError if parameter is an invalid input
     """
 
-# if type(player1) is not str (style keep function and (parameter) together with no space
-
     # define valid inputs
     valid_inputs = ["Rock", "Paper", "Scissors"]
 
@@ -57,13 +55,11 @@ def decide_rps(player1, player2):
         print ("error")
         raise ValueError ("Invalid value passes as parameter")
 
-    # define player1 and player2 input combinations (tuple is the dictionary key) and their corresponding results
+    # define player1 and player2 input combinations and their corresponding results
     rps_dict = {("Rock","Rock"):0, ("Paper","Paper"):0, ("Scissors","Scissors"):0,("Rock","Scissors"):1,
                 ("Paper","Rock"):1, ("Scissors","Paper"):1, ("Rock","Paper"):2, ("Paper","Scissors"):2,
                 ("Scissors","Rock"):2}
 
-    # create the lookup value
+    # create the lookup value and return results of the game
     players_inputs = (player1, player2)
-
-    # return the results of the game
     return rps_dict [players_inputs]

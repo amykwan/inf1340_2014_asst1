@@ -21,24 +21,28 @@ def test_checksum():
     assert checksum("123456789999") is True
     assert checksum("717951000841") is False
     assert checksum("123412341234") is False
-    # other tests
 
-def test_input():
+    # other tests
+def test_input_type():
     """
     Inputs that are the incorrect format and length
     """
     with pytest.raises(TypeError):
         checksum(1.0)
+    with pytest.raises(TypeError):
         checksum(786936224306)
 
+def test_input_value():
     with pytest.raises(ValueError):
         checksum("1")
+    with pytest.raises(ValueError):
         checksum("1234567890")
-        # other tests
+    with pytest.raises(ValueError):
         checksum("123456789012345")
 
 # add functions for any other tests
 def test_non_numeric_input():
     with pytest.raises(ValueError):
         checksum("asdfasdfasdf")
+    with pytest.raises(ValueError):
         checksum("12345abcde12")

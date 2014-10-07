@@ -41,7 +41,7 @@ def grade_to_gpa(grade):
     gpa = 0.0
 
     if type(grade) is str:
-        #print ("letter") # remove this line once the code is implemented
+        # print ("letter") # remove this line once the code is implemented
         # check that the grade is one of the accepted values
         if grade == "A+" or grade == "A" or grade == "A-" or grade == "B+" \
                 or grade == "B" or grade == "B-" or grade == "FZ":
@@ -52,7 +52,7 @@ def grade_to_gpa(grade):
             raise ValueError ("Invalid value passed as parameter")
 
     elif type(grade) is int:
-        #print("mark") # remove this line once the code is implemented
+        # print("mark") # remove this line once the code is implemented
         # check that grade is in the accepted range
         if grade >= 0 and grade <= 100:
             # convert the numeric grade to a letter grade
@@ -75,6 +75,7 @@ def grade_to_gpa(grade):
         else:
             print ("error")
             raise ValueError ("Grade out of range")
+
     else:
         # raise a TypeError exception
         print ("error")
